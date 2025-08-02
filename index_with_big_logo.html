@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Utley's Refreshments</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fffefa; color: #222; }
+    .announcement { background: #ffcc00; padding: 10px; text-align: center; font-weight: bold; }
+    header { background: linear-gradient(to right, red, yellow, green); padding: 20px; text-align: center; color: white; }
+    header img { width: 120px; border-radius: 10px; margin-bottom: 10px; }
+    header h1 { margin: 10px 0 0 0; font-size: 36px; }
+    .intro, .contact-section, .testimonials { padding: 30px 20px; text-align: center; }
+    .shop-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+    .product-card { background: #fff; border: 2px solid #ccc; border-radius: 12px; max-width: 300px; padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+    .product-card img { width: 100%; border-radius: 8px; }
+    .buy-button { margin-top: 10px; padding: 10px 20px; background: #ffcc00; border: none; border-radius: 5px;
+      color: black; font-weight: bold; text-decoration: none; display: inline-block; }
+    .testimonial-box { background: #fdfdfd; border-left: 5px solid #2e8b57; margin: 20px auto; padding: 20px;
+      max-width: 700px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: left; }
+    footer { background: #2e8b57; color: white; text-align: center; padding: 10px; }
+    @media(max-width: 600px) { .shop-section { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+  <div class="announcement">
+    🚚 Now Shipping! Order online at www.utleysrefreshments.com
+  </div>
+
+  <header>
+    <img src="utleys_logo.png" alt="Utley's Logo">
+    <h1>Utley's Refreshments</h1>
+    <p>Organic Juices for Health, Energy & Healing</p>
+  </header>
+
+  <div class="intro">
+    <h2>Welcome</h2>
+    <p>Discover handcrafted juice blends made with real fruits, herbs, and purpose. 🍋🌺🍍</p>
+  </div>
+
+  <section class="shop-section">
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2016/11/18/15/22/ginger-1838403_1280.jpg" alt="Ginger Bliss Shot">
+      <h3>Ginger Bliss Shot (3oz)</h3>
+      <p>$3.00</p>
+      <a class="buy-button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=thomasutley@hotmail.com&item_name=Ginger+Bliss+Shot&amount=3.00&currency_code=USD" target="_blank">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2021/03/24/11/32/beetroot-6119604_1280.jpg" alt="Earth Bloom Boost">
+      <h3>Earth Bloom Boost (1 Gallon)</h3>
+      <p>$30.00</p>
+      <a class="buy-button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=thomasutley@hotmail.com&item_name=Earth+Bloom+Boost&amount=30.00&currency_code=USD" target="_blank">Buy Now</a>
+    </div>
+    <div class="product-card">
+      <img src="https://cdn.pixabay.com/photo/2020/07/09/06/24/lemon-5386974_1280.jpg" alt="Nature's Groove">
+      <h3>Nature's Groove (1 Gallon)</h3>
+      <p>$30.00</p>
+      <a class="buy-button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=thomasutley@hotmail.com&item_name=Natures+Groove&amount=30.00&currency_code=USD" target="_blank">Buy Now</a>
+    </div>
+  </section>
+
+  <div class="testimonials">
+    <h2>Client Stories</h2>
+
+    <div class="testimonial-box">
+      <p>"I have been drinking Ginger juice for about 2 months now. It has helped me to stay regular — using the restroom 3 times a day instead of once or not at all. It's gentle on my stomach, no cramping. The taste is good! I drink 8 oz in the morning and 8 oz before bed. My skin looks better, my hair has grown, I have more energy, and I sleep better at night. It’s all-natural and affordable. If you want to get your health back on track, contact Thomas Utley!"</p>
+      <h4>– Maxine Smith, School Teacher</h4>
+    </div>
+
+    <div class="testimonial-box">
+      <p>"Hey, on behalf of my experience with the Ginger Bliss — it has helped me in many ways. My digestive system is more efficient, and I can tell I am definitely dropping pounds and feeling better about myself. I would definitely give Ginger Bliss a 5-star rating!"</p>
+      <h4>– Frederick Bennett, Dedicated Father</h4>
+    </div>
+
+    <div class="testimonial-box">
+      <p>"Hi, my name is Lynnell. I was introduced to Jesus Juice by Sandy and it has been life-changing. It curved my appetite, gave me more energy, and helped with my knee pain. I highly recommend giving Jesus Juice a try — I guarantee you won’t be disappointed!"</p>
+      <h4>– Lynnell, CNA</h4>
+    </div>
+
+    <div class="testimonial-box">
+      <p>"My name is Monay and I’ve been drinking Red Storm for about 2 months now. My energy skyrocketed! I’ve never had anything give me this much energy. I lost 4 pounds in a week — the fastest I’ve ever lost weight. Ginger Bliss also gives me energy. I’m less bloated, which I’ve always struggled with. These drinks are a game changer. If you want to better your health, I highly recommend!"</p>
+      <h4>– Monay</h4>
+    </div>
+
+  </div>
+
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:thomasutley@hotmail.com">thomasutley@hotmail.com</a></p>
+    <p>Phone: 252.467.3001</p>
+    <p>Rocky Mount, NC</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Utley's Refreshments. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
