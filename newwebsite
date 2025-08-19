@@ -1,0 +1,158 @@
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+export default function Website() {
+  return (
+    <div className="font-sans text-gray-800">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-green-500 via-yellow-400 to-red-500 text-white py-20 px-6 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-4xl md:text-6xl font-bold mb-4"
+        >
+          Utley’s Refreshments
+        </motion.h1>
+        <p className="text-lg md:text-2xl mb-6">
+          Organic Juices & Shots for Energy, Health, and Balance
+        </p>
+        <Button className="bg-white text-green-700 font-bold text-lg px-6 py-3 rounded-2xl shadow-lg">
+          Shop Now
+        </Button>
+      </section>
+
+      {/* Products Section with PayPal Cart & Shipping */}
+      <section className="py-16 px-6 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center mb-10">Our Products</h2>
+        <form
+          action="https://www.paypal.com/cgi-bin/webscr"
+          method="post"
+          target="_blank"
+          className="max-w-6xl mx-auto"
+        >
+          <input type="hidden" name="cmd" value="_cart" />
+          <input type="hidden" name="upload" value="1" />
+          <input type="hidden" name="business" value="utleysrefreshments@gmail.com" />
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Ginger Shots */}
+            <Card className="rounded-2xl shadow-lg">
+              <CardContent className="p-6 text-center">
+                <img
+                  src="/final_images/ginger_shot_bottle_final.png"
+                  alt="Ginger Shots"
+                  className="w-48 h-64 object-contain mx-auto mb-4 drop-shadow-lg rounded-xl bg-white border border-gray-200"
+                />
+                <h3 className="text-xl font-bold mb-2">Ginger Shots</h3>
+                <p className="text-gray-600 mb-2">3oz boost for immunity & energy.</p>
+                <p className="text-lg font-bold mb-4">$3.00</p>
+                <input type="hidden" name="item_name_1" value="Ginger Shots" />
+                <input type="hidden" name="amount_1" value="3.00" />
+                <input type="number" name="quantity_1" min="1" defaultValue="1" className="w-16 text-center border rounded" />
+              </CardContent>
+            </Card>
+
+            {/* Nature's Groove */}
+            <Card className="rounded-2xl shadow-lg">
+              <CardContent className="p-6 text-center">
+                <img
+                  src="/final_images/natures_groove_bottle_final.png"
+                  alt="Nature’s Groove"
+                  className="w-48 h-64 object-contain mx-auto mb-4 drop-shadow-lg rounded-xl bg-white border border-gray-200"
+                />
+                <h3 className="text-xl font-bold mb-2">Nature’s Groove</h3>
+                <p className="text-gray-600 mb-2">Blend of ginger, cayenne, and apples.</p>
+                <p className="text-lg font-bold mb-4">$12.00</p>
+                <input type="hidden" name="item_name_2" value="Nature’s Groove" />
+                <input type="hidden" name="amount_2" value="12.00" />
+                <input type="number" name="quantity_2" min="1" defaultValue="1" className="w-16 text-center border rounded" />
+              </CardContent>
+            </Card>
+
+            {/* Earth Bloom Boost */}
+            <Card className="rounded-2xl shadow-lg">
+              <CardContent className="p-6 text-center">
+                <img
+                  src="/final_images/earth_bloom_boost_bottle_final.png"
+                  alt="Earth Bloom Boost"
+                  className="w-48 h-64 object-contain mx-auto mb-4 drop-shadow-lg rounded-xl bg-white border border-gray-200"
+                />
+                <h3 className="text-xl font-bold mb-2">Earth Bloom Boost</h3>
+                <p className="text-gray-600 mb-2">Hibiscus, lemon, beets & cayenne.</p>
+                <p className="text-lg font-bold mb-4">$15.00</p>
+                <input type="hidden" name="item_name_3" value="Earth Bloom Boost" />
+                <input type="hidden" name="amount_3" value="15.00" />
+                <input type="number" name="quantity_3" min="1" defaultValue="1" className="w-16 text-center border rounded" />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Shipping Options */}
+          <div className="text-center mt-10">
+            <h3 className="text-xl font-bold mb-4">Choose Shipping</h3>
+            <select name="handling_cart" className="border rounded px-4 py-2 mb-6">
+              <option value="0">Local Pickup (Free)</option>
+              <option value="5.00">Standard Shipping - $5.00</option>
+              <option value="10.00">Express Shipping - $10.00</option>
+            </select>
+            <br />
+            <button
+              type="submit"
+              className="bg-green-600 text-white font-bold px-8 py-3 rounded-xl shadow hover:bg-green-700 transition"
+            >
+              Add to Cart & Checkout with PayPal
+            </button>
+          </div>
+        </form>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-6 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-10">Customer Stories</h2>
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+          <Card className="p-6 rounded-2xl shadow-md">
+            <p className="italic mb-4">
+              “I’ve been drinking Ginger Juice for 2 months—it keeps me regular
+              and energized. Gentle on my stomach, and it tastes great!”
+            </p>
+            <p className="font-bold">– Happy Customer</p>
+          </Card>
+          <Card className="p-6 rounded-2xl shadow-md">
+            <p className="italic mb-4">
+              “Nature’s Groove gave me energy without the crash. Love how fresh
+              and natural it tastes!”
+            </p>
+            <p className="font-bold">– Loyal Fan</p>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-6 bg-gray-50 text-center">
+        <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+        <p className="mb-4">We’d love to hear from you!</p>
+        <div className="flex flex-col md:flex-row justify-center gap-6">
+          <a
+            href="mailto:utleysrefreshments@gmail.com"
+            className="flex items-center gap-2 text-green-600 hover:underline"
+          >
+            📧 utleysrefreshments@gmail.com
+          </a>
+          <a
+            href="tel:2523666033"
+            className="flex items-center gap-2 text-green-600 hover:underline"
+          >
+            📞 (252) 366-6033
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-green-700 text-white py-6 text-center">
+        <p>© {new Date().getFullYear()} Utley’s Refreshments. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
