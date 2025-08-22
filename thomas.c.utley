@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Utley’s Refreshments</title>
+  <meta name="description" content="Organic juices & shots for energy, health, and balance." />
+  <style>
+    :root { --g:#22c55e; --y:#f59e0b; --r:#ef4444; --text:#1f2937; --muted:#6b7280; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:#f7f7f7}
+    .hero{background:linear-gradient(90deg,var(--g),var(--y),var(--r));color:#fff;text-align:center;padding:72px 20px}
+    .hero h1{font-size:clamp(32px,6vw,64px);margin:0 0 8px;font-weight:800}
+    .hero p{font-size:clamp(16px,3.2vw,22px);margin:0 0 20px}
+    .btn{display:inline-block;background:#fff;color:#166534;font-weight:700;padding:12px 20px;border-radius:16px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+    .section{padding:56px 20px}
+    .container{max-width:1100px;margin:0 auto}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+    .card{background:#fff;border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.08);padding:20px;text-align:center}
+    .img{width:220px;height:300px;object-fit:contain;background:#fff;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 8px 16px rgba(0,0,0,.06);margin:0 auto 14px}
+    .title{font-weight:800;font-size:20px;margin:6px 0}
+    .muted{color:var(--muted)}
+    .price{font-weight:800;margin:8px 0 12px}
+    .qty{width:72px;padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;text-align:center}
+    .ship-wrap{margin-top:26px;text-align:center}
+    .select{padding:10px 14px;border:1px solid #d1d5db;border-radius:12px}
+    .cta{margin-top:18px;background:#16a34a;color:#fff;border:0;padding:12px 22px;border-radius:14px;font-weight:800;cursor:pointer}
+    .cta:hover{background:#15803d}
+    h2.sec{font-size:28px;text-align:center;margin:0 0 26px}
+    .footer{background:#166534;color:#fff;text-align:center;padding:18px}
+    a.link{color:#16a34a;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Utley’s Refreshments</h1>
+    <p>Organic Juices & Shots for Energy, Health, and Balance</p>
+    <a class="btn" href="#shop">Shop Now</a>
+  </header>
+
+  <main>
+    <!-- SHOP / CART (PayPal hosted cart) -->
+    <section id="shop" class="section">
+      <div class="container">
+        <h2 class="sec">Our Products</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <!-- Required cart fields -->
+          <input type="hidden" name="cmd" value="_cart" />
+          <input type="hidden" name="upload" value="1" />
+          <input type="hidden" name="business" value="utleysrefreshments@gmail.com" />
+
+          <div class="grid">
+            <!-- Ginger Shots -->
+            <article class="card">
+              <img class="img" src="final_images/ginger_shot_bottle_final.png" alt="Ginger Shots bottle" />
+              <div class="title">Ginger Shots</div>
+              <div class="muted">3oz boost for immunity & energy</div>
+              <div class="price">$3.00</div>
+              <input type="hidden" name="item_name_1" value="Ginger Shots" />
+              <input type="hidden" name="amount_1" value="3.00" />
+              <label>
+                Qty
+                <input class="qty" type="number" name="quantity_1" min="0" value="1" />
+              </label>
+            </article>
+
+            <!-- Nature's Groove -->
+            <article class="card">
+              <img class="img" src="final_images/natures_groove_bottle_final.png" alt="Nature's Groove bottle" />
+              <div class="title">Nature’s Groove</div>
+              <div class="muted">Blend of ginger, cayenne, and apples</div>
+              <div class="price">$12.00</div>
+              <input type="hidden" name="item_name_2" value="Nature’s Groove" />
+              <input type="hidden" name="amount_2" value="30.00" />
+              <label>
+                Qty
+                <input class="qty" type="number" name="quantity_2" min="0" value="1" />
+              </label>
+            </article>
+
+            <!-- Earth Bloom Boost -->
+            <article class="card">
+              <img class="img" src="final_images/earth_bloom_boost_bottle_final.png" alt="Earth Bloom Boost bottle" />
+              <div class="title">Earth Bloom Boost</div>
+              <div class="muted">Hibiscus, lemon, beets & cayenne</div>
+              <div class="price">$15.00</div>
+              <input type="hidden" name="item_name_3" value="Earth Bloom Boost" />
+              <input type="hidden" name="amount_3" value="30.00" />
+              <label>
+                Qty
+                <input class="qty" type="number" name="quantity_3" min="0" value="1" />
+              </label>
+            </article>
+          </div>
+
+          <!-- Shipping selector applies to whole cart -->
+          <div class="ship-wrap">
+            <h3 style="margin:0 0 10px">Choose Shipping</h3>
+            <!-- PayPal cart-level handling -->
+            <select class="select" name="handling_cart">
+              <option value="0">Local Pickup (Free)</option>
+              <option value="5.00">Standard Shipping - $5.00</option>
+              <option value="10.00">Express Shipping - $10.00</option>
+            </select>
+            <div>
+              <button class="cta" type="submit">Add to Cart & Checkout with PayPal</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <h2 class="sec">Customer Stories</h2>
+        <div class="grid">
+          <div class="card"><em>“I’ve been drinking Ginger Juice for 2 months—it keeps me regular and energized. Gentle on my stomach, and it tastes great!”</em><br><strong>– Happy Customer</strong></div>
+          <div class="card"><em>“Nature’s Groove gave me energy without the crash. Love how fresh and natural it tastes!”</em><br><strong>– Loyal Fan</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container" style="text-align:center">
+        <h2 class="sec">Contact Us</h2>
+        <p>We’d love to hear from you!</p>
+        <p>
+          <a class="link" href="mailto:utleysrefreshments@gmail.com">utleysrefreshments@gmail.com</a>
+          &nbsp;•&nbsp;
+          <a class="link" href="tel:2523666033">(252) 366-6033</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Utley’s Refreshments. All rights reserved.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
