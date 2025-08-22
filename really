@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utley’s Refreshments Bottle Mockups</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f3f3f3; padding: 40px; }
+    h1 { text-align: center; color: #2c7a3f; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+    .card { background: white; border-radius: 16px; padding: 20px; text-align: center; box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+    .card img { width: 220px; height: 350px; object-fit: contain; margin-bottom: 15px; border-radius: 14px; }
+    .title { font-size: 1.3rem; font-weight: bold; margin-bottom: 8px; }
+    .desc { color: #555; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Utley’s Refreshments – Clean Bottle Mockups with Labels</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="/mockups/ginger_shot_bottle.png" alt="Ginger Shots Bottle Mockup">
+      <div class="title">Ginger Shots</div>
+      <div class="desc">3oz plastic bottle with Utley’s Refreshments label.</div>
+    </div>
+    <div class="card">
+      <img src="/mockups/natures_groove_bottle.png" alt="Nature's Groove Bottle Mockup">
+      <div class="title">Nature’s Groove</div>
+      <div class="desc">12oz clear bottle with label artwork applied.</div>
+    </div>
+    <div class="card">
+      <img src="/mockups/earth_bloom_boost_bottle.png" alt="Earth Bloom Boost Bottle Mockup">
+      <div class="title">Earth Bloom Boost</div>
+      <div class="desc">16oz plastic bottle with branded label applied.</div>
+    </div>
+  </div>
+</body>
+</html>
